@@ -108,7 +108,6 @@ def weather_pull():
                             poll_data['list'][0]['components']['pm10']
     #All dataframes combined
     df4 = pd.concat([df1, df2, df3], axis=1).set_index('Timestamp')
-    df4.to_csv('Weather_Leeds.csv')
 
     conn = create_db_connection()
     cur = conn.cursor()
